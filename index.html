@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="exam">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Exam</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exam</h1>
+    </header>
+    <main>
+
+        <div class='ng-app' ng-controller='toBuyController as toBuyCntr'>
+            <h2>List of cars</h2>
+            <div ng-if="toBuyCntr.toBuyItems.length == 0">
+                there are no items in this list
+            </div>
+            <div class='itm-lst'>
+                <div class="itm-elem">
+                    <div ng-repeat="item in toBuyCntr.toBuyItems">
+                        {{item.name}}
+                    </div>
+                </div>
+                <div class="itm-elem">
+                    <div ng-repeat="item in toBuyCntr.toBuyItems">
+                        {{item.amount}}
+                    </div>
+                </div>
+                <div class="itm-elem">
+                    <div ng-repeat="item in toBuyCntr.toBuyItems">
+                        <button ng-click="toBuyCntr.hideToBought($index)">Hide</button>
+                    </div>
+                </div>
+                <div class="itm-elem">
+                    <div ng-repeat="item in toBuyCntr.toBuyItems">
+                        <button ng-click="toBuyCntr.addToBought($index)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+</body>
+
+</html>

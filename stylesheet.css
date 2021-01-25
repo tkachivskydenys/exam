@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    padding:0;	
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.itm-col-l{
+    margin-left: 35%;
+    text-align: center;
+	float:left;
+}
+
+.itm-col-r{
+    margin-right: 20%;
+    text-align: center;
+	float: right;;
+}
+
+.itm-lst{
+    width: max-content;
+}
+
+.itm-elem{
+    margin-left: 10px;
+    width:max-content;
+	float: left;
+}
+
+.itm-elem div{
+    height: 50px;
+}
+
